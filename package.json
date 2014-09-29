@@ -1,0 +1,10 @@
+{
+    "name": "solidbrackets-tessel",
+    "version": "0.0.1",
+    "main": "app.js",
+    "private": true,
+    "description": "Package file for tessel",
+    "dependencies": {
+        "audio-vs1053b": "*"
+    }
+}
