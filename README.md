@@ -12,6 +12,7 @@ If you want to connect to your own SolidShops account, just change the API keys 
 * tessel wifi -n NETWORK -p KEY
 * sudo tessel erase --force
 * clone this repository
+* npm install
 * add you own API key and secret to the config.json file
 * sudo tessel run|push app.js
 
