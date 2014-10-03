@@ -68,6 +68,7 @@ function fnGetData() {
 var id_order_latest = 0;
 function fnHandleOrder(obj_order) {
     //check order data
+    console.log("fnHandleOrder");
     if (parseInt(obj_order.id) > id_order_latest) {
         id_order_latest = parseInt(obj_order.id);
         console.log("a new order was found: " + id_order_latest);
@@ -97,12 +98,14 @@ function fnPlayNotification(str_filename) {
         console.log("Volumse set");
         //just play something so you know the app has started
         fnPlayNotification("sound/neworder.mp3");
-        //run after 5 seconds after app is completely booted
-        setTimeout(function () {
-            setInterval(fnGetData, obj_config.interval);
-        }, 5);
+        //start app
+        fnGetData();
+        setInterval(fnGetData, obj_config.interval);
     });
  });
+
+
+
 
 
 
